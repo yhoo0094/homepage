@@ -1,0 +1,211 @@
+/* 로컬 폰트 정의 */
+@font-face {
+	font-family: 'NanumPenScript';
+	src: url('./fonts/NanumPenScript-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Jua';
+	src: url('./fonts/Jua-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	min-width: 1000px;
+	min-height: 500px;
+}
+
+button{
+	font-size: 1rem;
+}
+
+ul{
+	list-style: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+#header{
+	height: 100px;
+	display: flex;
+	flex-wrap: wrap; /* 요소가 넘칠 경우 다음 줄로 넘김 */
+	justify-content: center; /* 가로로 가운데 정렬 */
+    align-items: center; /* 세로로 가운데 정렬 */
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#logoBox{
+	display: flex;
+	flex-grow: 1;
+	padding-left: 2rem;
+}
+
+#logoImg{
+	cursor: pointer;
+}
+
+#logoText{
+	font-size: 3rem;
+	font-family: 'NanumPenScript', sans-serif;
+	cursor: pointer;
+}
+
+#navigationBox{
+	display: inline-block;
+	font-family: 'Jua', sans-serif;
+}
+
+#navigationBox > ul {
+    display: flex; /* li 요소들이 가로로 배치됨 */
+	/*flex-direction: row-reverse;  li 요소들이 오른쪽부터 배치됨 */
+}
+
+#navigationBox li.top-menu {
+	font-size: 1.6rem;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	width: 10rem;
+}
+
+.sub-menu {
+    opacity: 0; 
+    visibility: hidden;
+    transition: visibility .2s ease, transform .2s ease;
+	width: 10rem;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    z-index: 99999;
+}
+
+.sub-menu li{
+	margin: 0.7rem 0;
+}
+
+.have-sub-menu:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+	right: auto;
+    left: 0;
+}
+
+li:hover, .sub-menu li:hover {
+	color: rgb(98, 100, 100);
+}
+
+li:hover ul, li:hover li {
+	color: initial; /* li:hover가 하위 태그에 상속되는 것을 방지 */
+}
+
+/* 로딩바 시작 */
+.loadingPanel{
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.loadingImg{
+	width: 120px;
+	height: 120px;
+	border: 7px solid rgba(168, 151, 198, 0.2);
+	border-top-color: #5894cf;
+	border-radius: 50%;
+	animation: spinner 800ms infinite linear;
+}
+
+.loadingText{
+	position: fixed;
+	font-weight: bold;
+	animation: flicker 1100ms infinite alternate;
+}
+
+.copyText{
+    position: fixed;
+    font-weight: bold;
+    background-color: #3f2c2ce3;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 12px;
+}
+
+@keyframes spinner{
+	from {transform: rotate(0deg);}
+	to   {transform: rotate(359deg);}
+}
+
+@keyframes flicker{
+	from {opacity: 1;}
+	to   {opacity: 0;}
+}
+/* 로딩바 끝 */
+
+/* 반응형 스타일 시작 */
+/* 화면이 ?px 이상일 때 */
+@media screen and (min-width: 100px){
+	.itemBlock{
+		flex: 0 0 100%;
+	}	
+	html{
+		font-size: 10px;
+	}
+
+	#schType, #schOrder{
+		width: 100%;
+	}	
+	
+	#schItmNm{
+	    flex: 1 0 80%; 
+	}	
+}
+@media screen and (min-width: 300px){
+	.itemBlock{
+		flex: 0 0 50%;
+	}
+	html{
+		font-size: 11px;
+	}	
+	
+	#schType, #schOrder{
+		width: 140px;
+	}		
+}
+@media screen and (min-width: 600px){
+	.itemBlock{
+		flex: 0 0 33%;
+	}	
+	html{
+		font-size: 12px;
+	}
+	
+	#schItmNm{
+	    flex: 1 0 0; 
+	}		
+}    
+@media screen and (min-width: 900px){
+	.itemBlock{
+		flex: 0 0 25%;
+	}	
+	html{
+		font-size: 13px;
+	}
+} 
+@media screen and (min-width: 1200px){
+	.itemBlock{
+		flex: 0 0 20%;
+	}	
+	html{
+		font-size: 14px;
+	}
+} 
+/* 반응형 스타일 끝 */
