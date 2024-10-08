@@ -1,0 +1,168 @@
+button{
+	font-size: 1rem;
+}
+
+.itemImg{
+	width: 80%;
+}
+
+.itemBlock {
+    box-sizing: border-box;
+}
+
+.itemBox{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.itemCard {
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 95%;
+}
+
+.itemImgBox{
+	text-align: center;
+}
+
+.itemPrice{
+	text-align: right;
+	color: #b50707;
+}
+
+.itemBtn{
+	text-align: right;
+}
+
+.itemInfo{
+	margin: 5px 0;
+	font-weight: bold;
+}
+
+.schTag{
+	margin: 2px;
+}
+
+.itemName {
+    display: inline-block;
+    min-height: 3rem;
+}
+
+#searchBox{
+	display: flex;
+	flex-wrap: wrap; /* 요소가 넘칠 경우 다음 줄로 넘김 */
+	justify-content: left;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+/* 로딩바 시작 */
+.loadingPanel{
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.loadingImg{
+	width: 120px;
+	height: 120px;
+	border: 7px solid rgba(168, 151, 198, 0.2);
+	border-top-color: #5894cf;
+	border-radius: 50%;
+	animation: spinner 800ms infinite linear;
+}
+
+.loadingText{
+	position: fixed;
+	font-weight: bold;
+	animation: flicker 1100ms infinite alternate;
+}
+
+.copyText{
+    position: fixed;
+    font-weight: bold;
+    background-color: #3f2c2ce3;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 12px;
+}
+
+@keyframes spinner{
+	from {transform: rotate(0deg);}
+	to   {transform: rotate(359deg);}
+}
+
+@keyframes flicker{
+	from {opacity: 1;}
+	to   {opacity: 0;}
+}
+/* 로딩바 끝 */
+
+/* 반응형 스타일 시작 */
+/* 화면이 ?px 이상일 때 */
+@media screen and (min-width: 100px){
+	.itemBlock{
+		flex: 0 0 100%;
+	}	
+	html{
+		font-size: 10px;
+	}
+
+	#schType, #schOrder{
+		width: 100%;
+	}	
+	
+	#schItmNm{
+	    flex: 1 0 80%; 
+	}	
+}
+@media screen and (min-width: 300px){
+	.itemBlock{
+		flex: 0 0 50%;
+	}
+	html{
+		font-size: 11px;
+	}	
+	
+	#schType, #schOrder{
+		width: 140px;
+	}		
+}
+@media screen and (min-width: 600px){
+	.itemBlock{
+		flex: 0 0 33%;
+	}	
+	html{
+		font-size: 12px;
+	}
+	
+	#schItmNm{
+	    flex: 1 0 0; 
+	}		
+}    
+@media screen and (min-width: 900px){
+	.itemBlock{
+		flex: 0 0 25%;
+	}	
+	html{
+		font-size: 13px;
+	}
+} 
+@media screen and (min-width: 1200px){
+	.itemBlock{
+		flex: 0 0 20%;
+	}	
+	html{
+		font-size: 14px;
+	}
+} 
+/* 반응형 스타일 끝 */
