@@ -13,7 +13,7 @@ function moveMenu(path) {
 	// 프로토콜, 호스트, 그리고 경로를 합쳐서 원하는 URL 추출
 	const baseUrl = `${url.protocol}//${url.host}${url.pathname.split('/').slice(0, -1).join('/')}/`;
 
-	window.location.href=baseUrl + '/' + path;
+	window.location.href=baseUrl + path;
 }
 
 
