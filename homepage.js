@@ -13,7 +13,13 @@ function moveMenu(path) {
 	// 프로토콜, 호스트, 그리고 경로를 합쳐서 원하는 URL 추출
 	const baseUrl = `${url.protocol}//${url.host}${url.pathname.split('/').slice(0, -1).join('/')}/`;
 
-	window.location.href=baseUrl + path;
+	if(baseUrl.indexOf('http') > 0 || path == ''){
+		//웹인 경우 || 홈 이동인 경우
+		window.location.href=baseUrl + path;
+	} else {
+		//로컬인 경우
+		window.location.href=baseUrl + path + '.html';
+	}
 }
 
 
