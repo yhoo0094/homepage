@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 모든 html에서 반복되는 영역 시작 -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="../images/system/title_icon.png"> <!-- title 아이콘 변경 -->	
+<script>
+	$(document).ready(function(){
+		$('#header').load("./header.html");
+		$('#portfolioMnu').load("./portfolioMnu.html");
+	});	
+</script>
+<!-- 모든 html에서 반복되는 영역 끝 -->
+ 
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="header"></div>
+		<div id="portfolioMnu"></div>
+		<h1>메뉴1</h1>
+		
+		<!-- 로딩 패널 -->
+		<div id="loadingPanel" class="loadingPanel">
+			<div class="loadingImg"></div>
+			<div class="loadingText">L o a d i n g . . .</div>
+		</div>
+		
+		<!-- 복사 알림 -->
+		<div id="copyPanel" class="loadingPanel">
+			<div class="copyText">복사되었습니다.</div>
+		</div> 	
+	</div>	
+</body>
+</html>

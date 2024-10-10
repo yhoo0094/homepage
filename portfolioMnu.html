@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<style>
+	#mnuNavBox{
+		display: flex;
+		height: 12rem;
+		align-items: center; /* 수직 가운데 정렬 */
+		justify-content: center; /* 수평 가운데 정렬 */
+	}
+
+	.mnuBox{
+		cursor: pointer;
+	}
+
+	.mnuBox:hover .mnuImg {
+    	transform: scale(1.1);
+	}
+
+	.imgBox{
+		display: inline-block;
+		max-width: 12rem;
+		flex-grow: 1;
+		margin: 0 1rem;
+		/* overflow: hidden; */
+	}
+
+	.mnuImg{
+		max-width: 12rem;
+		flex-grow: 1;
+		transition: transform 0.3s ease;
+	}
+
+	.mnuNm{
+		text-align: center;
+		font-weight: bold;
+		margin: 0.5rem 0;
+	}
+</style>
+
+<body>
+	<div id="mnuNavBox">
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/medical.jpg"/>
+			</div>
+			<p class="mnuNm">의료공간</p>
+		</span>
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/business.jpg"/>
+			</div>
+			<p class="mnuNm">사무공간</p>
+		</span>
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/dwelling.jpg"/>
+			</div>
+			<p class="mnuNm">주거공간</p>
+		</span>
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/commerce.jpg"/>
+			</div>
+			<p class="mnuNm">상업공간</p>
+		</span>
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/production.jpg"/>
+			</div>
+			<p class="mnuNm">생산공간</p>
+		</span>
+		<span class="mnuBox">
+			<div class="imgBox">
+				<img class="mnuImg" src="./images/portfolio/mnu/other.jpg"/>
+			</div>
+			<p class="mnuNm">기타공간</p>
+		</span>
+	</div>
+</body>	
