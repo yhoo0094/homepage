@@ -3,23 +3,26 @@ $(()=>{
 })
 
 //메뉴이동
-function moveMenu(path) {
-	// 현재 URL 전체 가져오기
-	const currentUrl = window.location.href;
-
-	// URL 객체 사용
-	const url = new URL(currentUrl);
-
-	// 프로토콜, 호스트, 그리고 경로를 합쳐서 원하는 URL 추출
-	const baseUrl = `${url.protocol}//${url.host}${url.pathname.split('/').slice(0, -1).join('/')}/`;
+function moveMenu(path, parameter) {
+	const currentUrl = window.location.href;    // 현재 URL 전체 가져오기
+	const url = new URL(currentUrl);    // URL 객체 사용
+	const baseUrl = `${url.protocol}//${url.host}${url.pathname.split('/').slice(0, -1).join('/')}/`;   // 프로토콜, 호스트, 그리고 경로를 합쳐서 원하는 URL 추출
+    let result = '';
 
 	if(baseUrl.indexOf('http') > 0 || path == ''){
 		//웹인 경우 || 홈 이동인 경우
-		window.location.href=baseUrl + path;
+		result = baseUrl + path;
 	} else {
 		//로컬인 경우
-		window.location.href=baseUrl + path + '.html';
+		result = baseUrl + path + '.html';
 	}
+
+    //파라미터 처리
+    if(parameter){
+        result = result + '?' + parameter;
+    }
+
+    window.location.href = result
 }
 
 
