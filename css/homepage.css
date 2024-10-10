@@ -31,7 +31,7 @@ ul{
 }
 
 #header{
-	height: 100px;
+	height: 7rem;
 	display: flex;
 	flex-wrap: wrap; /* 요소가 넘칠 경우 다음 줄로 넘김 */
 	justify-content: center; /* 가로로 가운데 정렬 */
@@ -49,6 +49,8 @@ ul{
 
 #logoImg{
 	cursor: pointer;
+	height: 4rem;
+    width: 4rem;
 }
 
 #logoText{
