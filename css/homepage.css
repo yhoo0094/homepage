@@ -70,13 +70,12 @@ ul{
 }
 
 #navigationBox li.top-menu {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
     position: relative;
     text-align: center;
     width: 10rem;
-	line-height: 3rem;
-    font-weight: bold;
+    line-height: 3rem;
 }
 
 .sub-menu {
@@ -92,7 +91,7 @@ ul{
 
 .sub-menu li{
 	margin: 0.7rem 0;
-	font-size: 1rem;
+	font-size: 1.3rem;
 }
 
 .top-menu::after {
