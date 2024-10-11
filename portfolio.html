@@ -8,18 +8,108 @@
 <script>
 	$(document).ready(function(){
 		$('#header').load("./header.html");
-		$('#portfolioMnu').load("./portfolioMnu.html");
+		// $('#portfolioMnu').load("./portfolioMnu.html");
+
+		const urlParams = new URLSearchParams(window.location.search);
+		let subMnu = urlParams.get('subMnu');
+		setMnuContent(subMnu);	//메뉴 내용 변경
 	});	
+
+	//메뉴 내용 변경
+	function setMnuContent(subMnu){
+		if(subMnu == 'medical'){
+			$('#mnuTitle').text('의료공간');
+		}
+	}
 </script>
 <!-- 모든 html에서 반복되는 영역 끝 -->
- 
 </head>
-
 <body>
 	<div class="wrap">
 		<div id="header"></div>
 		<div id="portfolioMnu"></div>
-		<h1>메뉴1</h1>
+		<div id="mnuTitleBox">
+			<div id="mnuNavBox">
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/medical.jpg"/>
+					</div>
+					<p class="mnuNm">의료공간</p>
+				</span>
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/business.jpg"/>
+					</div>
+					<p class="mnuNm">사무공간</p>
+				</span>
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/dwelling.jpg"/>
+					</div>
+					<p class="mnuNm">주거공간</p>
+				</span>
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/commerce.jpg"/>
+					</div>
+					<p class="mnuNm">상업공간</p>
+				</span>
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/production.jpg"/>
+					</div>
+					<p class="mnuNm">생산공간</p>
+				</span>
+				<span class="mnuBox">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/other.jpg"/>
+					</div>
+					<p class="mnuNm">기타공간</p>
+				</span>
+			</div>
+		</div>
+
+		<div class="designLine"></div>
+
+		<div id="contentArea">
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content1.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오01</p>
+			</div>
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content2.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오02</p>
+			</div>
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content3.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오03</p>
+			</div>
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content4.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오04</p>
+			</div>
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content5.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오05</p>
+			</div>
+			<div class="contentBox">
+				<div class="contentImgBox">
+					<img class="contentImg" src="./images\portfolio\content\medical\content6.jpg"/>
+				</div>
+				<p class="contentNm">포트폴리오06</p>
+			</div>
+		</div>
+		
 		
 		<!-- 로딩 패널 -->
 		<div id="loadingPanel" class="loadingPanel">

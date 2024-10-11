@@ -25,10 +25,12 @@ ul{
 .wrap{
 	min-width: 1000px;
     min-height: 500px;
-    max-width: 1500px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* header 시작 */
 
 #header{
 	height: 7rem;
@@ -124,6 +126,86 @@ li:hover, .sub-menu li:hover {
 li:hover ul, li:hover li {
 	color: initial; /* li:hover가 하위 태그에 상속되는 것을 방지 */
 }
+
+/* header 끝 */
+
+#mnuTitleBox{
+	 text-align: center;
+	 margin: 1rem 0;
+}
+
+/* portfolio 시작 */
+
+#mnuNavBox{
+	display: flex;
+	height: 12rem;
+	align-items: center; /* 수직 가운데 정렬 */
+	justify-content: center; /* 수평 가운데 정렬 */
+}
+
+.mnuBox{
+	cursor: pointer;
+}
+
+.mnuBox:hover .mnuImg {
+	transform: scale(1.1);
+}
+
+.imgBox{
+	display: inline-block;
+	max-width: 12rem;
+	flex-grow: 1;
+	margin: 0 1rem;
+	/* overflow: hidden; */
+}
+
+.mnuImg{
+	max-width: 12rem;
+	flex-grow: 1;
+	transition: transform 0.3s ease;
+}
+
+.mnuNm{
+	text-align: center;
+	font-weight: bold;
+	margin: 0.5rem 0;
+}
+
+#contentArea{
+	display: flex;
+	align-items: center; /* 수직 가운데 정렬 */
+	justify-content: center; /* 수평 가운데 정렬 */
+}
+
+.contentBox{
+	cursor: pointer;
+	flex: 0 0 33%;
+}
+
+.contentImgBox{
+	display: inline-block;
+	margin: 0 1rem;
+	/* overflow: hidden; */
+	border: 1px solid #DDD
+}
+
+.contentImg{
+	width: 100%;
+	padding: 1rem;
+}
+
+.contentNm{
+	text-align: center;
+	font-weight: bold;
+	margin: 0.5rem 0;
+}
+
+.designLine{
+    border-top: 2px solid #dbdbdb;
+    padding-bottom: 6px;
+}
+
+/* portfolio 끝 */
 
 /* 로딩바 시작 */
 .loadingPanel{
