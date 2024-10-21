@@ -31,7 +31,6 @@ ul{
 }
 
 /* header 시작 */
-
 #header{
 	height: 7rem;
 	display: flex;
@@ -41,6 +40,7 @@ ul{
     position: sticky;
     top: 0;
     background-color: white;
+	z-index: 9999;
 }
 
 #logoBox{
@@ -126,18 +126,97 @@ li:hover, .sub-menu li:hover {
 li:hover ul, li:hover li {
 	color: initial; /* li:hover가 하위 태그에 상속되는 것을 방지 */
 }
-
 /* header 끝 */
+
+/* index.html 시작 */
+#bannerImgBox{
+	display: flex;
+	height: 50rem;
+	position: relative;
+	text-align: center;	
+}
+
+.bannerImg{
+    width: 100%;
+	height: auto;	
+}
+
+.bannerTxt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5); /* 텍스트 가독성을 높이기 위한 반투명 배경 */
+	padding: 10px;
+	border-radius: 5px;
+	text-align: left;
+}
+
+#bannerImgBox{
+	display: flex;
+	height: 50rem;
+}
+
+#homeBoardBox {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem; /* 컬럼 사이 간격 */
+    padding: 2rem 0;
+}
+
+.homeBoardCol {
+    background-color: #f2eaf7; /* 연한 보라색 배경 */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    /* max-width: 400px; 최대 폭 설정 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.homeBoardCol p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #383e82; /* 진한 파란색 텍스트 */
+    margin-bottom: 15px;
+}
+
+.homeBoardCol table {
+    width: 100%;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 카드 스타일 그림자 */
+}
+
+.homeBoardCol table tr {
+    cursor: pointer;
+}
+
+.homeBoardCol table td {
+    padding: 10px;
+    background-color: #ffffff; /* 하얀 배경 */
+    margin-bottom: 10px;
+}
+
+.homeBoardCol table td:nth-child(2) {
+    text-align: right;
+    color: #9e9e9e; /* 날짜에 대한 회색 텍스트 */
+}
+/* index.html 끝 */
 
 #mnuTitleBox{
 	 text-align: center;
 	 margin: 1rem 0;
 }
 
-/* portfolio 시작 */
+.mnuBoxHome{
+	flex: 0 1 calc(33.3%); /* 각 이미지가 3개씩 배치되도록 설정 */
+}
 
+/* portfolio 시작 */
 #mnuNavBox{
 	display: flex;
+	flex-wrap: wrap;
 	height: 12rem;
 	align-items: center; /* 수직 가운데 정렬 */
 	justify-content: center; /* 수평 가운데 정렬 */
@@ -159,8 +238,12 @@ li:hover ul, li:hover li {
 	/* overflow: hidden; */
 }
 
+.homepage .imgBox{
+	max-width: 30rem;
+}
+
 .mnuImg{
-	max-width: 12rem;
+	max-width: 100%;
 	flex-grow: 1;
 	transition: transform 0.3s ease;
 }

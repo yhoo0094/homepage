@@ -21,20 +21,113 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div class="wrap homepage">
 		<div id="header"></div>
-		<div id="searchBox">
-			<select id="schType" class="form-select schTag" onChange="setData()">
-				<option value="">분류</option>
-			</select>
-			<select id="schOrder" class="form-select schTag" onChange="setData()">
-				<option value="ITM_NM">상품명 정렬</option>
-				<option value="PRICE">가격 정렬</option>
-			</select>
-			<input type="text" id="schItmNm" class="form-control schTag" onkeypress="if(event.keyCode == 13){setData()}">
-			<button type="button" class="btn btn-primary schTag" onClick="setData()">검색</button>
+
+		<div id="bannerImgBox">
+			<img class="bannerImg" src="./images/system/homeBanner.jpg"/>
+			<div class="bannerTxt">
+				<P>메인화면1-1/ 거의 같은 형식으로 진행, </P>
+				<P>위에 메뉴 있고 가운데 그림 들어가고,</P>
+				<P>텍스트 있고</P>
+			</div>
 		</div>
-		<div id="itemBox" class="itemBox"></div>
+
+		<div id="homeBoardBox">
+			<div class="homeBoardCol">
+				<p>공지사항</p>
+				<table>
+					<tr>
+						<td>공지사항 제목1</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>공지사항 제목2</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>공지사항 제목3</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>공지사항 제목4</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>공지사항 제목5</td>
+						<td>2024.01.01</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="homeBoardCol">
+				<p>유관기관 소식</p>
+				<table>
+					<tr>
+						<td>유관기관 소식1</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>유관기관 소식2</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>유관기관 소식3</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>유관기관 소식4</td>
+						<td>2024.01.01</td>
+					</tr>
+					<tr>
+						<td>유관기관 소식5</td>
+						<td>2024.01.01</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="mnuTitleBox">
+			<div id="mnuNavBox">
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/medical.jpg"/>
+					</div>
+					<p class="mnuNm">변호사</p>
+				</span>
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/business.jpg"/>
+					</div>
+					<p class="mnuNm">인테리어</p>
+				</span>
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/dwelling.jpg"/>
+					</div>
+					<p class="mnuNm">비즈니스 모델 상담</p>
+				</span>
+				<br/>
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/commerce.jpg"/>
+					</div>
+					<p class="mnuNm">특허/상표권</p>
+				</span>
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/production.jpg"/>
+					</div>
+					<p class="mnuNm">시제품 제작 - 식품</p>
+				</span>
+				<span class="mnuBox mnuBoxHome">
+					<div class="imgBox">
+						<img class="mnuImg" src="./images/portfolio/mnu/other.jpg"/>
+					</div>
+					<p class="mnuNm">시제품 제작 - 식품</p>
+				</span>
+			</div>
+		</div>
 		
 		<!-- 로딩 패널 -->
 		<div id="loadingPanel" class="loadingPanel">
