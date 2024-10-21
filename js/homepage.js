@@ -9,7 +9,7 @@ function moveMenu(path, parameter) {
 	const baseUrl = `${url.protocol}//${url.host}${url.pathname.split('/').slice(0, -1).join('/')}/`;   // 프로토콜, 호스트, 그리고 경로를 합쳐서 원하는 URL 추출
     let result = '';
 
-	if(baseUrl.indexOf('127.0.0.1') > -1 || baseUrl.indexOf('localhost')){
+	if(baseUrl.indexOf('127.0.0.1') > -1 || baseUrl.indexOf('localhost') > -1){
 		//로컬인 경우
 		result = baseUrl + path + '.html';
 	} else {
